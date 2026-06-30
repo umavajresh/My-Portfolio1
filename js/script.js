@@ -103,23 +103,45 @@ function updateActiveNavLink() {
     });
 }
 
-// --- Contact Form - Generate Mailto ---
-const contactForm = document.getElementById("contact-form");
+// --- Contact Form - Send via Formspree ---
+const formspreeEndpoint = "https://formspree.io/f/xzdlarog";
 
-contactForm.addEventListener("submit", (e) => {
+const contactForm = document.getElementById("contact-form");
+const submitBtn = document.getElementById("submit-btn");
+const formStatus = document.getElementById("form-status");
+
+contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const message = document.getElementById("message").value;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+    formStatus.textContent = "";
+    formStatus.className = "form-status";
 
-    const subject = `Portfolio Inquiry from ${name}`;
-    const body = `Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Message: ${message}`;
-    window.location.href = `mailto:umavajresh9@email.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    try {
+        const response = await fetch(formspreeEndpoint, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: {
+                Accept: "application/json"
+            }
+        });
+
+        if (response.ok) {
+            formStatus.textContent = "Message sent successfully! I'll get back to you soon.";
+            formStatus.classList.add("success");
+            contactForm.reset();
+        } else {
+            throw new Error("Form submission failed");
+        }
+    } catch (error) {
+        formStatus.textContent = "Something went wrong. Please try again or email me directly.";
+        formStatus.classList.add("error");
+        console.error("Formspree error:", error);
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send Message";
+    }
 });
 
 // --- Certificate Modal Popup ---
