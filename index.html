@@ -4,70 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | AI & ML Developer</title>
+    <title> AI & ML Developer</title>
     <meta name="description" content="Professional portfolio of a Software Engineer specializing in AI & ML.">
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .skill-list {
-            display: grid;
-            gap: 14px;
-            margin-top: 18px;
-        }
-
-        .skill-item {
-            padding: 14px 0;
-            border-bottom: 1px solid rgba(148, 163, 184, 0.22);
-        }
-
-        .skill-item:last-child {
-            border-bottom: 0;
-        }
-
-        .skill-item__top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            margin-bottom: 7px;
-        }
-
-        .skill-item__name {
-            font-weight: 700;
-            color: inherit;
-        }
-
-        .skill-item__level {
-            flex: 0 0 auto;
-            padding: 6px 12px;
-            border-radius: 999px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.01em;
-            color: #06100F; /* dark text for contrast on bright background */
-            background: linear-gradient(90deg, var(--accent), var(--accent-strong));
-            border: none;
-            box-shadow: 0 2px 8px rgba(13, 19, 33, 0.35);
-        }
-
-        .skill-item__note {
-            margin: 0;
-            font-size: 0.92rem;
-            line-height: 1.6;
-            color: #64748b;
-        }
-
-        @media (max-width: 520px) {
-            .skill-item__top {
-                align-items: flex-start;
-                flex-direction: column;
-                gap: 8px;
-            }
-        }
-    </style>
 </head>
 <body>
+
+    <!-- Top footer-style bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">Follow my work on
+                <a href="https://github.com/umavajresh" target="_blank" rel="noopener noreferrer">
+                    <span class="github-icon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 2.01-.27c.68 0 1.37.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+                        </svg>
+                    </span> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/uma-vajresh-9778513b2/" target="_blank" rel="noopener noreferrer">
+                    <span class="social-icon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.98 3.5C4.98 5.06 3.79 6.25 2.23 6.25C0.68 6.25 -0.5 5.06 -0.5 3.5C-0.5 1.94 0.68 0.75 2.23 0.75C3.79 0.75 4.98 1.94 4.98 3.5ZM0.3 24.5H4.2V7.98H0.3V24.5ZM8.17 7.98H12.01V10.03H12.07C12.77 8.98 14.35 7.84 16.58 7.84C21.2 7.84 22 10.83 22 15.44V24.5H18.07V16.38C18.07 14.45 17.99 11.98 15.4 11.98C12.77 11.98 12.34 14.01 12.34 16.21V24.5H8.41V7.98H8.17Z"/>
+                        </svg>
+                    </span> LinkedIn
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#projects" class="btn btn-primary btn-sm">View Projects</a>
+                <a href="./assets/Vankadari_Uma_Vajresh_Single_Page.pdf" download="resume.pdf" class="btn btn-outline btn-sm">Resume</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Scroll Progress Indicator -->
     <div id="scroll-progress"></div>
@@ -111,6 +80,22 @@
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary">View Projects</a>
                         <a href="./assets/Vankadari_Uma_Vajresh_Single_Page.pdf" download="resume.pdf" class="btn btn-outline">Download Resume</a>
+                    </div>
+                    <div class="hero-bottom-links">
+                        <a href="https://github.com/umavajresh" target="_blank" rel="noopener noreferrer" class="hero-github-link">
+                            <span class="github-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 2.01-.27c.68 0 1.37.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+                                </svg>
+                            </span> Visit GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/uma-vajresh-9778513b2/" target="_blank" rel="noopener noreferrer" class="hero-github-link">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.98 3.5C4.98 5.06 3.79 6.25 2.23 6.25C0.68 6.25 -0.5 5.06 -0.5 3.5C-0.5 1.94 0.68 0.75 2.23 0.75C3.79 0.75 4.98 1.94 4.98 3.5ZM0.3 24.5H4.2V7.98H0.3V24.5ZM8.17 7.98H12.01V10.03H12.07C12.77 8.98 14.35 7.84 16.58 7.84C21.2 7.84 22 10.83 22 15.44V24.5H18.07V16.38C18.07 14.45 17.99 11.98 15.4 11.98C12.77 11.98 12.34 14.01 12.34 16.21V24.5H8.41V7.98H8.17Z"/>
+                                </svg>
+                            </span> Visit LinkedIn
+                        </a>
                     </div>
                 </div>
                 <div class="hero-image-container reveal">
@@ -221,7 +206,7 @@
                     <!-- Project 3 -->
                     <div class="project-card" data-category="completed">
                         <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400" alt="Project 3">
+                            <img src="./assets/ongoing.jpg" alt="Project 3">
                         </div>
                         <div class="project-info">
                             <span class="status ongoing">ongoing</span>
@@ -254,7 +239,8 @@
                             <span class="time-label">June 2026 - Present</span>
                             <h3>Internship</h3>
                             <p class="company">Pavishree design.</p>
-                            <p>Developing scalable  front-end web applications and DSA</p>
+                            <p>I am currently pursuing an internship focused on frontend development, where I am building 
+                                a strong foundation in core web technologies such as HTML and CSS for structuring and styling responsive interfaces, along with JavaScript for adding interactivity and dynamic functionality. I am also gaining hands-on experience with React for building reusable, component-based user interfaces, and learning to deploy projects using platforms like Vercel. This internship has allowed me to strengthen my technical skills while working on real-world projects, and I am continuously expanding my knowledge of modern frontend tools and best practices.</p>
                         </div>
                     </div>
                     <!-- Experience 2 -->
@@ -295,6 +281,13 @@
                                     <span class="skill-item__level">Strong foundation</span>
                                 </div>
                                 <p class="skill-item__note">Object-oriented programming, DSA practice, and structured problem solving.</p>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__top">
+                                    <span class="skill-item__name">Vercel</span>
+                                    <span class="skill-item__level">Basic foundation</span>
+                                </div>
+                                <p class="skill-item__note">Vercel is a cloud platform used to deploy, host, and scale frontend web applications quickly, offering seamless integration with frameworks like React and Next.js."</p>
                             </div>
                             <div class="skill-item">
                                 <div class="skill-item__top">
@@ -445,7 +438,7 @@
                                 <strong>Location:</strong> <span>Kadapa, INDIA</span>
                             </div>
                             <div class="contact-link">
-                                <strong>GIT HUB:</strong> <span>https://github.com/umavajresh</span>
+                                <strong>Git Hub:</strong> <span>https://github.com/umavajresh</span>
                             </div>
                         </div>
                     </div>
@@ -484,10 +477,38 @@
             <div class="footer-content">
                 <p>&copy; 2024 V.Uma Vajresh. All rights reserved.</p>
                 <div class="social-links">
-                    <a href="https://github.com/umavajresh">GitHub</a>
-                    <a href="https://www.linkedin.com/in/uma-vajresh-9778513b2/">LinkedIn</a>
-                    <a href="https://leetcode.com/u/VWtdPPOvNT/">LeetCode</a>
-                    <a href="https://www.hackerrank.com/profile/umavajresh9">Hacker Rank</a>
+                    <a href="https://github.com/umavajresh" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 2.01-.27c.68 0 1.37.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+                            </svg>
+                        </span>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/uma-vajresh-9778513b2/" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.98 3.5C4.98 5.06 3.79 6.25 2.23 6.25C0.68 6.25 -0.5 5.06 -0.5 3.5C-0.5 1.94 0.68 0.75 2.23 0.75C3.79 0.75 4.98 1.94 4.98 3.5ZM0.3 24.5H4.2V7.98H0.3V24.5ZM8.17 7.98H12.01V10.03H12.07C12.77 8.98 14.35 7.84 16.58 7.84C21.2 7.84 22 10.83 22 15.44V24.5H18.07V16.38C18.07 14.45 17.99 11.98 15.4 11.98C12.77 11.98 12.34 14.01 12.34 16.21V24.5H8.41V7.98H8.17Z"/>
+                            </svg>
+                        </span>
+                        LinkedIn
+                    </a>
+                    <a href="https://leetcode.com/u/VWtdPPOvNT/" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.12 4.32L8.58 3.3C9.03 3.18 9.51 3.26 9.89 3.53L18.67 9.9C19.43 10.45 19.59 11.5 19.04 12.26C18.49 13.02 17.44 13.18 16.68 12.63L10.33 7.45L8.14 13.7L14.15 17.01C14.87 17.38 15.18 18.24 14.81 18.97C14.44 19.69 13.59 20.01 12.87 19.64L5.7 15.74C4.96 15.35 4.64 14.45 5.01 13.73L8.08 6.75L5.12 4.32ZM7.25 18.33C7.25 17.6 7.89 16.96 8.62 16.96C9.35 16.96 9.99 17.6 9.99 18.33C9.99 19.06 9.35 19.7 8.62 19.7C7.89 19.7 7.25 19.06 7.25 18.33Z"/>
+                            </svg>
+                        </span>
+                        LeetCode
+                    </a>
+                    <a href="https://www.hackerrank.com/profile/umavajresh9" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.5 7.5V16.5C3.5 17.047 3.947 17.5 4.5 17.5H7.5C8.053 17.5 8.5 17.047 8.5 16.5V11.5H15.5V16.5C15.5 17.047 15.947 17.5 16.5 17.5H19.5C20.053 17.5 20.5 17.047 20.5 16.5V7.5C20.5 6.953 20.053 6.5 19.5 6.5H16.5C15.947 6.5 15.5 6.953 15.5 7.5V12.5H8.5V7.5C8.5 6.953 8.053 6.5 7.5 6.5H4.5C3.947 6.5 3.5 6.953 3.5 7.5Z"/>
+                            </svg>
+                        </span>
+                        HackerRank
+                    </a>
                 </div>
                 <p class="build-tag">Built with HTML, CSS, and JavaScript</p>
             </div>
